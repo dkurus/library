@@ -1,5 +1,8 @@
 .container {
-    width: fit-content
+  
+
+
+    
 }
 
 input {
@@ -11,6 +14,20 @@ th, tr, td {
   padding: 9px;
 }
 
-.material-icons {
+td[data-row="3"] {
+  color:rgb(42, 165, 63);
+}
+
+td[data-row="3"]:hover {
+  color:rgb(42, 165, 63);
+  cursor:pointer;
+}
+
+td[data-row="4"] {
   color:brown;
+}
+
+td[data-row="4"]:hover {
+  color:brown;
+  cursor:pointer;
 }
