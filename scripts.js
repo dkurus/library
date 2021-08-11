@@ -1,7 +1,3 @@
-window.addEventListener('load', ()=>{
-    array.push(JSON.parse(localStorage.getItem('array')));
-})
-
 let myLibrary = [];
 function Book(title, author, readStatus){
     this.title = title
@@ -169,6 +165,28 @@ function assignEditBtnEvent (elements){
 function saveData(){
     localStorage.setItem('array', JSON.stringify(myLibrary));
 }
+
+function getData(){
+    if(!localStorage.getItem('array')){
+        return;
+    }  else {
+            myLibrary = JSON.parse(localStorage.getItem('array'));
+            clearTable();
+            createHeader();
+            createTable();
+    }
+}
+
+const clearSaveBtn = document.querySelector('#clearBtn');
+clearSaveBtn.addEventListener('click', ()=>{
+    localStorage.clear();
+    // clearTable();
+    // createTable();
+})
+
+
+getData();
+
 
 
 

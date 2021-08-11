@@ -12,15 +12,16 @@
 <body>
     
     <form class='container'>
+        <p>New Book</p>
         <label for='title'></label>
-        <input type='text' id='title' placeholder='title' required><br>
+        <input type='text' id='title' placeholder='title'><br>
 
         <label for='author'></label>
         <input type='text' id='author' placeholder='author'>
 
         <p>Status</p>
         <div>
-            <input type='radio' id='have-read' name="readStatus" value='completed' required>
+            <input type='radio' id='have-read' name="readStatus" value='completed' >
             <label for='haveRead'>Completed</label>
         </div>
         <div>
@@ -32,6 +33,7 @@
             <label for='notRead'>Not Read</label>
         </div>
         <input type='submit' id='submit'/>
+        <button id='clearBtn'>Delete All Data</button>
     </form>
     <div id='table'>
 

@@ -25,6 +25,8 @@ input {
 p {
   font-size: 25px;
   color: white;
+  margin-top: 20px;
+  margin-bottom: 10px
   
 }
 label {
@@ -52,6 +54,7 @@ th, tr, td {
 
 td[data-row="3"] {
   color:rgb(42, 165, 63);
+  
 }
 
 td[data-row="3"]:hover {
@@ -67,4 +70,13 @@ td[data-row="4"] {
 td[data-row="4"]:hover {
   color:brown;
   cursor:pointer;
+}
+
+button {
+  font-size: 20px;
+  position: fixed;
+  display: block;
+  bottom: 10px;
+  margin-left: 5px;
+  width: 280px;
 }
