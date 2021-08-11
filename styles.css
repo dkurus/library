@@ -1,17 +1,53 @@
+html, body {
+  background-color: rgb(201, 197, 207);
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-  
-
-
-    
+  height: 100%;
+  right: 1px;
+  position: fixed;
+  background-color: rgb(99, 47, 47);  
+  border: 2px solid black;
+  padding: 20px 20px;
 }
 
 input {
     font-size: 20px;
+    margin: 5px; 
+}
+[data-row="0"], [data-row="1"], [data-row="2"] {
+  width: 200px;
+}
+
+p {
+  font-size: 25px;
+  color: white;
+  
+}
+label {
+  font-size: 25px;
+  color: white;
+}
+
+table {
+ background:rgb(153, 146, 146);
+
+
+ 
 }
 
 th, tr, td {
-  border: 1px solid black;  
-  padding: 9px;
+  
+  border: 2px solid black;  
+  font-size: 20px;
+  padding: 20px 10px;
+  color: white;
+  background: rgb(99, 47, 47);;
+  
+  
 }
 
 td[data-row="3"] {
@@ -21,6 +57,7 @@ td[data-row="3"] {
 td[data-row="3"]:hover {
   color:rgb(42, 165, 63);
   cursor:pointer;
+
 }
 
 td[data-row="4"] {

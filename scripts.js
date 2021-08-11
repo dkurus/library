@@ -43,7 +43,7 @@ function createHeader (){
         const headerRow = document.createElement('tr');
         headerRow.setAttribute('data-visibility', 'visible')
         table.appendChild(headerRow);
-        const header = ['Title', 'Author', 'Status'];
+        const header = ['Title', 'Author', 'Status', 'Options'];
         header.forEach((heading)=>{
             const cell = document.createElement('th');
             const textNode = document.createTextNode(heading);
