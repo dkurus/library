@@ -1,3 +1,7 @@
+window.addEventListener('load', ()=>{
+    array.push(localStorage.setItem('array'));
+})
+
 let myLibrary = [];
 function Book(title, author, readStatus){
     this.title = title
@@ -13,6 +17,7 @@ function addBookToLibrary (book) {
     }  else {
         createHeader();
         myLibrary.push(book);
+        saveData ();
         clearTable();
         createTable();
     }   
@@ -107,6 +112,7 @@ function assignRemoveButtonEvent(elements) {
             element.addEventListener('click', (ev)=>{
                 const whichRowToRemove = Number(ev.target.getAttribute('data-remove'));
                 myLibrary.splice(whichRowToRemove, 1);
+                saveData ();
                 clearTable();
                 createTable();
             })
@@ -151,7 +157,7 @@ function assignEditBtnEvent (elements){
                 else if (myLibrary[whichRowToEdit].readStatus === "not-read"){
                     myLibrary[whichRowToEdit].readStatus = 'currently-reading';
                 }
-        
+                saveData();
                 clearTable();
                 createTable();
             })
@@ -159,6 +165,11 @@ function assignEditBtnEvent (elements){
     })
 
 }
+
+function saveData(){
+    localStorage.setItem('array', JSON.stringify(myLibrary));
+}
+
 
 
 
