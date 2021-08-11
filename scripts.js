@@ -1,5 +1,5 @@
 window.addEventListener('load', ()=>{
-    array.push(localStorage.setItem('array'));
+    array.push(JSON.parse(localStorage.getItem('array')));
 })
 
 let myLibrary = [];
