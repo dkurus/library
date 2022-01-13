@@ -1,10 +1,12 @@
 let myLibrary = [];
-function Book(title, author, readStatus){
-    this.title = title
-    this.author = author
-    this.readStatus = readStatus
-    this.edit = 'edit'
-    this.delete = 'delete'
+class Book {
+    constructor (title, author, readStatus){
+        this.title = title
+        this.author = author
+        this.readStatus = readStatus
+        this.edit = 'edit'
+        this.delete = 'delete'
+    } 
 }
 
 function addBookToLibrary (book) {
@@ -13,7 +15,7 @@ function addBookToLibrary (book) {
     }  else {
         createHeader();
         myLibrary.push(book);
-        saveData ();
+        saveData();
         clearTable();
         createTable();
     }   
